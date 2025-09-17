@@ -7,5 +7,8 @@ def index(request):
 
 def Keyur(request):
     return HttpResponse("Hello,Keyur!")
+
 def Greet(request,name):
-    return HttpResponse(f"Hello,{name.capitalize()}")
+    return render(request, "Hello/Greet.html", {
+        "name": name.capitalize()
+    })
